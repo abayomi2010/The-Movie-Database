@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/TMDLogo.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&display=swap" rel="stylesheet">
+  <meta
+  http-equiv="Content-Security-Policy"
+  content="upgrade-insecure-requests" />
+  <title>The Movie Database</title>
+
+
+</head>
+
+<body>
+  <section class="hero jumbotron">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">The Movie Database</h1>
+        <p>
+          <a class="btn btn-lg btn-clear-light soft-transition" href="https://github.com/Jacwilalasey/Group-Project"
+            role="button" target="_blank">GITHUB REPO</a>
+          <span> | </span>
+          <a class="btn btn-lg btn-clear-light soft-transition" href="https://www.omdbapi.com/" role="button"
+            target="_blank">OMDB API</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- search and main return section-->
+  <!-- search button -->
+  <section id="search-section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-quarter content">
+          <form>
+            <input id="movie-input" class="input is-info" type="text" placeholder="Cars" />
+            <button id="search-button" class="button" type="submit">
+              Get Movie Info
+            </button>
+          </form>
+
+          <!-- list of searchable genres and randomise genres button -->
+          <div class="box table-box">
+            <div class="genre-container">
+              <h3 class="randSelect">Suggested Movies</h3>
+              <button class="button randomButton" id="random-render"></button>
+              <button class="button randomButton"></button>
+              <button class="button randomButton"></button>
+              <button id="random-btn" class="button">Randomise</button>
+            </div>
+            <div class="break"></div>
+            <div>
+              <a href="./index2.html" rel="no-referrer"><button class="button movieList"
+                  id="movieList">Favourites</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- query return box -->
+        <div id="notiSaved">Added to Favourites!</div>
+        <div id="notiNot">Already Saved!</div>
+
+        <div class="column">
+          <div id="search-data" class="box content columns">
+            <div class="column is-two-fifths is-justify-content-center movie-image">
+            </div>
+
+            <div class="column current-movie-data">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- search return section  -->
+  <div class="container" id="populate-searches">
+
+
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

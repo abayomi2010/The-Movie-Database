@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <link rel="icon" href="assets/images/TMDLogo.png">
+
+  <title>My Movie List</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="hero jumbotron">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">The Movie Database</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapperSect">
+    <div class="wrapper">
+      <h2>Saved Movies</h2>
+      <div id="movieList" class="list-group"></div>
+
+      <a href="./index.html"><button class="button savedButton">Go Back</button></a>
+      <button class="button savedButton" id="clear">Clear Movies</button>
+    </div>
+  </section>
+
+  <script>
+    // Append the saved movies in local storage to the page
+    let list = JSON.parse(localStorage.getItem("movieTitle"))
+    for (let i = 0; i < list.length; i++) {
+      let newPara = $("<div>").text(list[i]).addClass("list-group-item");
+      $("#movieList").append(newPara)
+    }
+
+    $("#clear").click(function () {
+      $("#movieList").empty();
+      $("#clear").remove();
+      localStorage.clear();
+    })
+
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</body>
+
+</html>
