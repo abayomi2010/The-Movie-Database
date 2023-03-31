@@ -26,9 +26,11 @@ To save a movie to your list of saved movies, click the "Add to Saved Movies" bu
 ### Links
 Here are the links to the GitHub repository and GitHub Pages for this project:
 
-[Repository](https://github.com/Jacwilalasey/Group-Project)
+[Group repository](https://github.com/Jacwilalasey/The-Movie-Database/tree/Yomi-Branch)
 
-[Github Pages](https://jacwilalasey.github.io/The-Movie-Database/)
+[Persnoal Repository](https://github.com/abayomi2010/The-Movie-Database)
+
+[Github Pages](https://abayomi2010.github.io/The-Movie-Database/)
 
 ### Demo
 Here is a gif demonstrating the functionality of the app:
